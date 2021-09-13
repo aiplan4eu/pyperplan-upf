@@ -75,8 +75,7 @@ class SolverImpl(upf.Solver):
         # and traverse the AST
         probAST.accept(visitor)
         prob = visitor.get_problem()
-        print("PROBELM PARSED:")
-        print(prob)
+        print("DOMAIN PARSED:")
         print(dom)
         #< Problem definition: robot Domain: domain_robot Objects: ['location', 'location'] Initial State: ["robot_at[('l1', location)]"] Goal State : ["robot_at[('l2', (location,))]"] >
         #< Problem definition: robot Domain: domain_robot Objects: ['location', 'location'] Initial State: ["robot_at[('l1', location)]"] Goal State : ["robot_at[('l2', (location,))]"] >
