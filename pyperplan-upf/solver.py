@@ -75,12 +75,13 @@ class SolverImpl(upf.Solver):
         # and traverse the AST
         probAST.accept(visitor)
         prob = visitor.get_problem()
-        print("DOMAIN PARSED:")
-        print(dom)
         #< Problem definition: robot Domain: domain_robot Objects: ['location', 'location'] Initial State: ["robot_at[('l1', location)]"] Goal State : ["robot_at[('l2', (location,))]"] >
         #< Problem definition: robot Domain: domain_robot Objects: ['location', 'location'] Initial State: ["robot_at[('l1', location)]"] Goal State : ["robot_at[('l2', (location,))]"] >
         #  finally return the pddl.Problem
         task = _ground(prob)
+        print("TASK GIUSTO")
+        print(task)
+
         heuristic = None
         # if not heuristic_class is None:
         #     heuristic = heuristic_class(task)
